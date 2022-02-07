@@ -5,6 +5,18 @@
 	padding: 0;
 	box-sizing: border-box;
 	line-height: 1.5;
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #888;
+		border-radius: 0.5em;
+	}
+	scrollbar-color: #888 transparent;
+	scrollbar-width: thin;
 }
 
 body {
@@ -12,6 +24,8 @@ body {
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
+	background-color: #002;
+	color: #ccc;
 }
 
 #root {
@@ -20,4 +34,6 @@ body {
 	position: relative;
 }
 
-@import 'spacing';
+.pointer {
+	cursor: pointer;
+}

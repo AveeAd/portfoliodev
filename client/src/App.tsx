@@ -1,10 +1,16 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Layout from './layouts';
 
 function App() {
 	return (
-		<div>
-			<h1 className="m-5 text-red">Hello World</h1>
-		</div>
+		<Layout>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="*" element={<div>404</div>} />
+			</Routes>
+		</Layout>
 	);
 }
 
