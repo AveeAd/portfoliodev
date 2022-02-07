@@ -42,7 +42,7 @@ export const StyledModal = styled.div`
 	bottom: 0;
 	right: 0;
 	z-index: 1000;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -66,6 +66,7 @@ export const StyledModal = styled.div`
 		z-index: 1002;
 		background-color: #002;
 		border-radius: 0.5rem;
+		box-shadow: 0 0 100px 5px rgba(255, 255, 255, 0.5);
 		.header,
 		.body,
 		.footer {
@@ -78,8 +79,6 @@ export const StyledModal = styled.div`
 			height: 20%;
 		}
 		.body {
-			background-color: #ccc;
-			color: #333;
 			border: 2px solid #002;
 			overflow-y: auto;
 			max-height: 60%;
