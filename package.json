@@ -1,0 +1,29 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server",
+		"server": "nodemon server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AveeAd/portfoliodev.git"
+	},
+	"author": "Kumar Adhikari",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/AveeAd/portfoliodev/issues"
+	},
+	"homepage": "https://github.com/AveeAd/portfoliodev#readme",
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.0",
+		"express": "^4.17.2",
+		"mongoose": "^6.2.0"
+	}
+}
