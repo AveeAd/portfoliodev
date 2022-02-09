@@ -5,36 +5,12 @@ interface ButtonProps {
 	children: React.ReactNode;
 	onClick?: () => void;
 	color?: string;
-	backgroundColor?: string;
-	borderColor?: string;
-	display?: string;
-	width?: string;
-	height?: string;
-	margin?: string;
+	[rest: string]: any;
 }
 
-const Button = ({
-	children,
-	onClick,
-	color,
-	backgroundColor,
-	borderColor,
-	display,
-	width,
-	height,
-	margin,
-}: ButtonProps) => {
+const Button = ({ children, onClick, ...rest }: ButtonProps) => {
 	return (
-		<StyledButton
-			onClick={onClick}
-			color={color}
-			backgroundColor={backgroundColor}
-			borderColor={borderColor}
-			display={display}
-			width={width}
-			height={height}
-			margin={margin}
-		>
+		<StyledButton onClick={onClick} {...rest}>
 			{children}
 		</StyledButton>
 	);

@@ -12,7 +12,6 @@ export const LayoutContainer = styled.div`
 		'foot foot';
 	grid-template-rows: max-content 1fr max-content;
 	grid-gap: 1rem;
-	header,
 	section,
 	main,
 	footer {
@@ -25,6 +24,7 @@ export const HeaderContainer = styled.header`
 	grid-area: head;
 	display: flex;
 	border-bottom: 1px solid #008;
+	padding: 0.5rem 2rem;
 `;
 
 export const SidebarContainer = styled.section`

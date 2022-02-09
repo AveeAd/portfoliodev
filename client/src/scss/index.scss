@@ -37,3 +37,12 @@ body {
 .pointer {
 	cursor: pointer;
 }
+
+.scaleOnHover {
+	transition: all 300ms ease-in-out;
+	&:hover {
+		transform: scale(1.5);
+	}
+}
+
+@import 'animation';

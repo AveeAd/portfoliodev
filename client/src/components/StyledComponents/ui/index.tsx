@@ -8,10 +8,12 @@ export interface ButtonStyleProps {
 	width?: string;
 	height?: string;
 	margin?: string;
+	padding?: string;
+	eventBg?: string;
+	eventColor?: string;
 }
 
 export const StyledButton = styled.button`
-	padding: 0.5rem 1rem;
 	border-radius: 0.25rem;
 	text-align: center;
 	cursor: pointer;
@@ -24,6 +26,11 @@ export const StyledButton = styled.button`
       height: ${props?.height};
       border: 1px solid ${props?.borderColor ? props?.borderColor : `transparent`};
       margin: ${props?.margin};
+			padding: ${props.padding ? props.padding : '0.5rem 1rem'};
+			&:active,&:hover,&:focus {
+				background: ${props?.eventBg};
+				color: ${props?.eventColor};
+			}
     `}
 `;
 
