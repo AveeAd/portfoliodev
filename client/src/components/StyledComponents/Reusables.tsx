@@ -6,11 +6,15 @@ export const Menu = styled(NavLink)`
 	background-color: transparent;
 	font-weight: 600;
 	color: #ccc;
-	width: 100%;
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	border-bottom: 1px solid #ccc;
-	padding: 0.5rem 1rem;
-	transition: all 300ms ease-in-out;
+	padding: 0.8rem;
+	margin-bottom: 0.5rem;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	transition: all 200ms ease-in-out;
 	&.active,
 	&:hover {
 		color: #002;

@@ -5,7 +5,7 @@ export const LayoutContainer = styled.div`
 	width: 100vw;
 	overflow: hidden;
 	display: grid;
-	grid-template-columns: 20% 1fr;
+	grid-template-columns: max-content auto;
 	grid-template-areas:
 		'head head'
 		'sidebar content'
@@ -18,6 +18,12 @@ export const LayoutContainer = styled.div`
 		padding: 1rem;
 		border-radius: 0.5rem;
 	}
+	header:hover,
+	main:hover,
+	section:hover,
+	footer:hover {
+		border-color: #00f;
+	}
 `;
 
 export const HeaderContainer = styled.header`
@@ -28,16 +34,30 @@ export const HeaderContainer = styled.header`
 `;
 
 export const SidebarContainer = styled.section`
+	position: relative;
 	grid-area: sidebar;
 	height: 100%;
-	width: 100%;
+	width: max-content;
 	border: 1px solid #008;
 	border-left: none;
+	.collapse {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: grid;
+		place-content: center;
+		top: 10%;
+		right: -15px;
+	}
+	${({ collapse }: { collapse: boolean }) =>
+		collapse ? 'a {width: max-content; span { display: none;}}' : 'a{span {display: inline;} width: 15vw;}'}
 `;
 
 export const ContentContainer = styled.main`
 	grid-area: content;
 	height: 100%;
+	width: 100%;
 	border: 1px solid #008;
 	border-right: none;
 	overflow-y: auto;

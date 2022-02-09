@@ -1,26 +1,30 @@
 import React from 'react';
 import { SidebarContainer } from '../components/StyledComponents/Layouts';
 import { Menu } from '../components/StyledComponents/Reusables';
-import { FaHome, FaNewspaper, FaProjectDiagram, FaUserCircle } from 'react-icons/fa';
+import { FaHome, FaNewspaper, FaProjectDiagram, FaUserCircle, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 const Sidebar = () => {
+	const [isOpen, setIsOpen] = React.useState<boolean>(true);
 	return (
-		<SidebarContainer>
+		<SidebarContainer collapse={isOpen}>
+			<button className="collapse" onClick={() => setIsOpen(!isOpen)}>
+				{isOpen ? <FaChevronRight /> : <FaChevronLeft />}
+			</button>
 			<Menu to="/">
 				<FaHome />
-				&nbsp; Home
+				<span>&nbsp; Home</span>
 			</Menu>
 			<Menu to="/articles">
 				<FaNewspaper />
-				&nbsp; Articles
+				<span>&nbsp; Articles</span>
 			</Menu>
 			<Menu to="/projects">
 				<FaProjectDiagram />
-				&nbsp; Projects
+				<span>&nbsp; Projects</span>
 			</Menu>
 			<Menu to="/about">
 				<FaUserCircle />
-				&nbsp; About
+				<span>&nbsp; About</span>
 			</Menu>
 		</SidebarContainer>
 	);
