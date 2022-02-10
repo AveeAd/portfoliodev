@@ -4,9 +4,8 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
-		"start": "npm predeploy && node server",
-		"server": "nodemon server",
-		"predeploy": "cd client && yarn install && yarn build"
+		"start": "cd client && yarn install && yarn build && cd ../ && node server",
+		"server": "nodemon server"
 	},
 	"repository": {
 		"type": "git",
