@@ -10,13 +10,14 @@ import {
 	SiRedux,
 	SiTypescript,
 } from 'react-icons/si';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from '../components/ui/Button';
 
 const Home = () => {
-	const [show, setShow] = useState<boolean>(false);
-	const handleClose = () => {
-		setShow(false);
+	const navigate = useNavigate();
+	const handleClick = () => {
+		navigate('/hire');
 	};
 	return (
 		<Container>
@@ -42,6 +43,7 @@ const Home = () => {
 					eventBg="white"
 					eventColor="#002"
 					style={{ fontSize: '1.2rem', transition: 'all 300ms ease-in' }}
+					onClick={handleClick}
 				>
 					Let's Build Something...
 				</Button>
