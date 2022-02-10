@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node server",
 		"server": "nodemon server",
-		"predeploy": "cd client && yarn install && yarn build"
+		"heroku-predeploy": "cd client && yarn install && yarn build"
 	},
 	"repository": {
 		"type": "git",
