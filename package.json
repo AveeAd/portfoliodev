@@ -4,9 +4,9 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
-		"start": "node server",
+		"start": "npm predeploy && node server",
 		"server": "nodemon server",
-		"heroku-predeploy": "cd client && yarn install && yarn build"
+		"predeploy": "cd client && yarn install && yarn build"
 	},
 	"repository": {
 		"type": "git",
