@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
-		"start": "cd client && yarn install && yarn build && cd ../ && node server",
+		"start": "cd client && npm install && npm build && cd ../ && node server",
 		"server": "nodemon server"
 	},
 	"repository": {
