@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node server",
 		"server": "nodemon server",
-		"predeploy": "cd client && npm run build"
+		"predeploy": "cd client && yarn install && yarn build"
 	},
 	"repository": {
 		"type": "git",
