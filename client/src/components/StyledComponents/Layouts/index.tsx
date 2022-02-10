@@ -57,9 +57,9 @@ export const SidebarContainer = styled.section`
 export const ContentContainer = styled.main`
 	grid-area: content;
 	height: 100%;
-	width: 100%;
+	width: calc(100% - 1rem);
+	margin-right: 1rem;
 	border: 1px solid #008;
-	border-right: none;
 	overflow-y: auto;
 	overflow-x: hidden;
 `;

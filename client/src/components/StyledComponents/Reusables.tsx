@@ -30,10 +30,12 @@ interface imageProps {
 	src?: string;
 	alt?: string;
 	circle?: boolean;
+	border?: string;
+	borderRadius?: string;
 }
 
 export const Image = styled.div`
-	${({ width, height, src, circle }: imageProps) => `
+	${({ width, height, src, circle, border, borderRadius }: imageProps) => `
 			width: ${width};
 			height: ${height};
 			background-color: #fff3;
@@ -41,6 +43,27 @@ export const Image = styled.div`
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+			border: ${border};
+			border-radius: ${borderRadius};
 			clip-path: ${circle ? 'circle(50%)' : 'none'};
 			`}
+`;
+
+export const Container = styled.div`
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-areas: 'content ad' 'content discover';
+	grid-gap: 1rem;
+`;
+
+export const SubContainer = styled.div`
+	grid-area: content;
+`;
+
+export const Ad = styled.div`
+	grid-area: ad;
+`;
+
+export const Discover = styled.div`
+	grid-area: discover;
 `;
