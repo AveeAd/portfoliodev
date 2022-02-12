@@ -51,7 +51,7 @@ const FlatCard = ({ publishedDate, title, longDescription, categories, image, ac
 					</div>
 				</div>
 			</section>
-			<Image height="100%" src={image && image} width="100%" border="1px solid #ccc" />
+			<Image height="100%" src={image && image} width="100%" borderRadius="5px" />
 		</FlatCardContainer>
 	);
 };
@@ -62,9 +62,7 @@ const FlatCardContainer = styled.div`
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	grid-gap: 0.5rem;
-	padding: 0.5rem;
-	margin-bottom: 0.5rem;
-	border-right: 1px dotted #ccc;
+	margin-bottom: 1rem;
 	section {
 		small {
 			font-style: italic;
