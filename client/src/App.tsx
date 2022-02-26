@@ -21,14 +21,14 @@ function App() {
 					</Layout>
 				}
 			/>
-			<Route
+			{/* <Route
 				path="/about"
 				element={
 					<Layout>
 						<About />
 					</Layout>
 				}
-			/>
+			/> */}
 			<Route
 				path="/articles"
 				element={

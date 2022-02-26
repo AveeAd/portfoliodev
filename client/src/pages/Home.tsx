@@ -21,20 +21,29 @@ const Home = () => {
 	};
 	return (
 		<Container>
+			<p className="landing-content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae mollitia, modi, tenetur illum impedit vitae atque
+				cupiditate recusandae ducimus commodi, quidem saepe voluptatum? Animi rem adipisci dicta, provident non nam, sed
+				distinctio, maiores totam magni consequatur suscipit ea placeat quae minus corporis atque illo optio ab quidem
+				impedit. Unde vitae fugiat cum facere nihil maxime et! Cupiditate, tempore vel! Sunt odit in consequatur
+				reiciendis dignissimos autem similique, ab corrupti nisi atque aspernatur, reprehenderit molestias, modi velit
+				ipsa dolor voluptatem rem minus. Aliquid impedit magnam, aperiam placeat nesciunt veritatis velit natus? Iusto
+				commodi, quidem quas numquam nemo, possimus, eos aliquam odit ad ullam neque asperiores minima dolorem modi! Nam
+				voluptate ipsam ratione esse consectetur tenetur molestiae, necessitatibus laborum, quis cupiditate itaque
+				sequi, delectus corrupti. Doloribus et nemo, mollitia cumque repellendus vitae architecto reprehenderit sequi
+			</p>
+			<IconContainer>
+				<SiHtml5 className="scaleOnHover" style={{ color: '#de4a24' }} />
+				<SiCss3 className="scaleOnHover" style={{ color: '#0067b7' }} />
+				<SiJavascript className="scaleOnHover" style={{ color: '#ead41c' }} />
+				<SiTypescript className="scaleOnHover" style={{ color: '#0073c3' }} />
+				<SiReact className="scaleOnHover" style={{ color: '#5bd7ef' }} />
+				<SiNodedotjs className="scaleOnHover" style={{ color: '#84ba00' }} />
+				<SiExpress className="scaleOnHover" style={{ color: '#ffffff' }} />
+				<SiMongodb className="scaleOnHover" style={{ color: '#419341' }} />
+				<SiRedux className="scaleOnHover" style={{ color: '#7146b3' }} />
+			</IconContainer>
 			<div>
-				<IconContainer>
-					<SiHtml5 className="scaleOnHover" style={{ color: '#de4a24' }} />
-					<SiCss3 className="scaleOnHover" style={{ color: '#0067b7' }} />
-					<SiJavascript className="scaleOnHover" style={{ color: '#ead41c' }} />
-					<SiTypescript className="scaleOnHover" style={{ color: '#0073c3' }} />
-					<SiReact className="scaleOnHover" style={{ color: '#5bd7ef' }} />
-					<SiNodedotjs className="scaleOnHover" style={{ color: '#84ba00' }} />
-					<SiExpress className="scaleOnHover" style={{ color: '#ffffff' }} />
-					<SiMongodb className="scaleOnHover" style={{ color: '#419341' }} />
-					<SiRedux className="scaleOnHover" style={{ color: '#7146b3' }} />
-				</IconContainer>
-			</div>
-			<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '30vh' }}>
 				<Button
 					borderColor="white"
 					width="30vw"
@@ -58,38 +67,24 @@ const Container = styled.div`
 	position: relative;
 	height: 100%;
 	overflow: hidden;
-	&::before {
-		content: '';
-		height: 20vmax;
-		width: 20vmax;
-		position: absolute;
-		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 100, 0.8));
-		backdrop-filter: blur(2rem);
-		top: 60%;
-		left: -5%;
-		z-index: -1;
-		border-radius: 50%;
-		animation: scale 3s ease-in-out;
-		animation-iteration-count: infinite;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.landing-content {
+		text-align: center;
+		width: 60%;
+		margin: 2rem 0;
+		&:hover {
+			color: #fff;
+		}
 	}
-	&::after {
-		content: '';
-		height: 40vmax;
-		width: 40vmax;
-		position: absolute;
-		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 100, 0.8));
-		backdrop-filter: blur(2rem);
-		top: -40%;
-		left: 60%;
-		z-index: -1;
-		border-radius: 50%;
-		animation: scale 5s ease-in-out;
-		animation-iteration-count: infinite;
+	div:last-child {
+		margin: 2rem 0;
 	}
 `;
 
 const IconContainer = styled.div`
-	height: 30vh;
 	font-size: 4rem;
 	display: flex;
 	justify-content: center;

@@ -22,10 +22,10 @@ const Sidebar = () => {
 				<FaProjectDiagram />
 				<span>&nbsp; Projects</span>
 			</Menu>
-			<Menu to="/about">
+			{/* <Menu to="/about">
 				<FaUserCircle />
 				<span>&nbsp; About</span>
-			</Menu>
+			</Menu> */}
 		</SidebarContainer>
 	);
 };

@@ -37,6 +37,7 @@ export const SidebarContainer = styled.section`
 		top: 10%;
 		right: -15px;
 	}
+
 	${({ collapse }: { collapse: boolean }) =>
 		collapse ? 'a {width: max-content; span { display: none;}}' : 'a{span {display: inline;} width: 15vw;}'}
 `;

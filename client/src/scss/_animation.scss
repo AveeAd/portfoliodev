@@ -10,6 +10,16 @@
 	}
 }
 
+@keyframes slideVertical {
+	from {
+		transform: translateY(-100%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
 // .something {
 //   animation: scale 1s linear;
 //   animation-iteration-count: infinite;
