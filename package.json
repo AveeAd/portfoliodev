@@ -1,6 +1,6 @@
 {
-	"homepage": "https://AveeAd.github.io/portfolio",
-	"name": "client",
+	"homepage": "https://aveead.github.io/portfoliodev/",
+	"name": "portfoliodev",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
