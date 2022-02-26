@@ -5,7 +5,7 @@ import './scss/index.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
-	<Router>
+	<Router basename="/portfolio">
 		<App />
 	</Router>,
 	document.getElementById('root')
